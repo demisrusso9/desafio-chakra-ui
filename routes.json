@@ -1,0 +1,5 @@
+{
+  "/api/continents": "/continents",
+  "/api/continents/:id": "/continents/:id",
+  "/api/continents/:name": "/continents/:name"
+}

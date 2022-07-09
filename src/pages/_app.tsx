@@ -1,15 +1,26 @@
 import Head from 'next/head'
+import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
-import '../styles/global.scss'
+import { Header } from '../components/Header'
+import { theme } from '../styles/theme'
+import { makeServer } from '../services/mirage'
+
+// if (process.env.NODE_ENV === 'development') {
+//   makeServer({ environment: 'development' })
+// }
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>template next</title>
+        <title>World Trip</title>
       </Head>
 
-      <Component {...pageProps} />
+      <ChakraProvider resetCSS theme={theme}>
+        <Header />
+
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   )
 }

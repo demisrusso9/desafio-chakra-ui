@@ -1,0 +1,22 @@
+.sliderWrapper {
+  :global(.swiper-pagination-bullet) {
+    background: #999999;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: #ffba08;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  :global(.swiper-button-prev),
+  :global(.swiper-button-next) {
+    color: #ffba08 !important;
+    padding: 0 3.5rem;
+  }
+}
